@@ -6,6 +6,8 @@ public static class NumberGuessingGame
 {
     public static void Run()
     {
+        Console.Title = "Guess the Number";
+
         Random rand = new();
 
         int guesses = 5;
@@ -21,6 +23,7 @@ public static class NumberGuessingGame
             Console.WriteLine("Goodbye!");
             Thread.Sleep(600);
             Console.Clear();
+            Console.Title = "CLI Games";
             return;
         }
         
@@ -40,6 +43,7 @@ public static class NumberGuessingGame
                     Console.WriteLine("Goodbye!");
                     Thread.Sleep(600);
                     Console.Clear();
+                    Console.Title = "CLI Games";
                     return;   
                 }
                 Console.Clear();

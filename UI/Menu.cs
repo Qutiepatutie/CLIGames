@@ -8,7 +8,7 @@ public class Menu
     {
         Console.Clear();
         int pos = 0;
-        int items = 2;
+        int items = 3;
         while (true)
         {
             PrintMenu(pos);
@@ -17,6 +17,7 @@ public class Menu
             switch (key.Key)
             {
                 case ConsoleKey.Escape:
+                    Console.Clear();
                     return;
                 
                 case ConsoleKey.DownArrow:
@@ -34,7 +35,8 @@ public class Menu
                         NumberGuessingGame.Run();
                     else if(pos == 1)
                         WordleGame.Run();
-
+                    else if(pos == 2)
+                        PewPew.Run();
                     break;
 
             }
@@ -51,6 +53,7 @@ public class Menu
 
         Console.WriteLine($"{(pos == 0 ? "->" : "  ")} Number Guessing Game");
         Console.WriteLine($"{(pos == 1 ? "->" : "  ")} Wordle");
+        Console.WriteLine($"{(pos == 2 ? "->" : "  ")} PewPew");
 
     }
 }

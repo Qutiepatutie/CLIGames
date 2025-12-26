@@ -6,6 +6,8 @@ public class WordleGame
 {
     public static void Run()
     {
+        Console.Title = "Wordle";
+
         string[] words = {"Sample", "Connect", "Hello", "Computer"};
         Random rand = new();
         
@@ -21,6 +23,7 @@ public class WordleGame
             Console.WriteLine("Goodbye!");
             Thread.Sleep(600);
             Console.Clear();
+            Console.Title = "CLI Games";
             return;
         }
         string[] attempts = {"","","","","",""};
@@ -66,6 +69,7 @@ public class WordleGame
                     Console.Write("Goodbye!");
                     Thread.Sleep(600);
                     Console.Clear();
+                    Console.Title = "CLI Games";
                     return;
                 }
                 guesses = 6;
